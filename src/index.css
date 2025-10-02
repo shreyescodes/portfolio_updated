@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  @apply antialiased text-gray-900;
+}
+
+/* Smooth transitions */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Button animations */
+.btn-hover {
+  @apply transform transition-all duration-300 ease-in-out;
+}
+
+.btn-hover:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+.btn-hover:active {
+  @apply translate-y-0 shadow-md;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transform transition-all duration-300 ease-in-out;
+}
+
+.card-hover:hover {
+  @apply -translate-y-2 shadow-xl;
+}
+
+/* Link animations */
+.link-hover {
+  @apply relative;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300;
+}
+
+.link-hover:hover::after {
+  @apply w-full;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-700;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced Scroll animations */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section transitions */
+section {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section:not(.visible) {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Smooth anchor scrolling */
+a[href^="#"] {
+  scroll-margin-top: 100px;
+  transition: color 0.3s ease;
+}
+
+/* Custom focus styles */
+*:focus {
+  @apply outline-none ring-2 ring-indigo-600 ring-opacity-50;
+}
+
+/* Improved accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced hover transitions */
+.hover-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-lift {
+  @apply hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Stagger animation for lists */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
