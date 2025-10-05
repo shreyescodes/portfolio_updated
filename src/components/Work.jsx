@@ -127,6 +127,116 @@
 
 
 
+// import React from 'react';
+// import { Calendar, MapPin } from 'lucide-react';
+
+// const Work = () => {
+//   const experiences = [
+//     {
+//       title: 'Associate Software Engineer',
+//       company: 'Ahana Systems and Solutions',
+//       period: 'Jul 2024 – Present',
+//       location: 'Bengaluru',
+//       description: [
+//         'Developed scalable and secure Node.js microservices with error handling and SHA-256 hash-based file integrity monitoring for over 100,000+ distributed files.',
+//         'Designed and optimized REST APIs using Express.js and Django ORM with Redis for in-memory caching, achieving 60% latency reduction.',
+//         'Participated in Agile SDLC via code reviews, CI pipelines, and pair programming, reducing bugs by 25%.',
+//       ],
+//     },
+//     {
+//       title: 'Python Developer Intern',
+//       company: 'GTPL',
+//       period: 'Feb 2024 – May 2024',
+//       location: 'Bengaluru',
+//       description: [
+//         'Contributed to Django PostgreSQL-based modules for customer data workflows in BFSI domain, with secure auth and form validation.',
+//         'Developed pytest-based unit test suite covering 85% of codebase; accelerated QA and deployment cycle.',
+//       ],
+//     },
+//     {
+//       title: 'Data Science and Business Analytics Intern',
+//       company: 'The Sparks Foundation',
+//       period: 'Apr 2022 – May 2022',
+//       location: 'Remote',
+//       description: [
+//         'Analyzed stock prices and news headlines, delivering actionable insights that improved forecasting accuracy by 25%.',
+//         'Developed dashboards in Python and Power BI for presenting insights clearly and concisely.',
+//       ],
+//     },
+//     {
+//       title: 'Machine Learning and Automation Intern',
+//       company: 'AiRobosoft',
+//       period: 'Jun 2020 – Aug 2020',
+//       location: 'Remote',
+//       description: [
+//         'Created an automated voice assistant for efficient task management, reducing manual effort by 25%.',
+//         'Streamlined repetitive tasks using Python scripts, improving productivity.',
+//       ],
+//     },
+//   ];
+
+//   return (
+//     <div className="py-24 bg-white h-screen flex flex-col">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-shrink-0">
+//         <div className="text-center">
+//           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Work Experience</h2>
+//           <p className="mt-4 text-xl text-gray-600">
+//             Professional journey and achievements
+//           </p>
+//         </div>
+//       </div>
+
+//       <div className="mt-20 flex-grow overflow-hidden">
+//         <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//           <div className="h-full overflow-y-auto pr-4 custom-scrollbar">
+//             <div className="space-y-8">
+//               {experiences.map((exp, index) => (
+//                 <div
+//                   key={index}
+//                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+//                 >
+//                   <div className="flex justify-between items-start">
+//                     <div>
+//                       <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
+//                       <p className="text-lg font-medium text-indigo-600">{exp.company}</p>
+//                     </div>
+//                   </div>
+
+//                   <div className="flex items-center text-sm text-gray-500 mt-2 space-x-4">
+//                     <div className="flex items-center">
+//                       <Calendar className="h-4 w-4 mr-1" />
+//                       {exp.period}
+//                     </div>
+//                     <div className="flex items-center">
+//                       <MapPin className="h-4 w-4 mr-1" />
+//                       {exp.location}
+//                     </div>
+//                   </div>
+
+//                   <ul className="mt-4 space-y-2">
+//                     {exp.description.map((item, i) => (
+//                       <li key={i} className="flex items-start">
+//                         <span className="inline-block w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-2"></span>
+//                         <span className="text-gray-600">{item}</span>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Work;
+
+
+
+
+
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 
@@ -135,22 +245,24 @@ const Work = () => {
     {
       title: 'Associate Software Engineer',
       company: 'Ahana Systems and Solutions',
-      period: 'Jul 2024 – Present',
+      period: 'Jul 2024 – July 2025',
       location: 'Bengaluru',
       description: [
-        'Developed scalable and secure Node.js microservices with error handling and SHA-256 hash-based file integrity monitoring for over 100,000+ distributed files.',
-        'Designed and optimized REST APIs using Express.js and Django ORM with Redis for in-memory caching, achieving 60% latency reduction.',
-        'Participated in Agile SDLC via code reviews, CI pipelines, and pair programming, reducing bugs by 25%.',
+        'Developed scalable Node.js microservices with SHA-256 file integrity monitoring for 100,000+ distributed files.',
+        'Optimized REST APIs with Redis caching, achieving 60% latency reduction.',
+        'Managed PostgreSQL schema design and CI/CD pipelines with AWS/Docker, reducing bugs by 25%.',
+        'Delivered full-stack features using TypeScript and React.js under tight deadlines.',
       ],
     },
     {
       title: 'Python Developer Intern',
       company: 'GTPL',
       period: 'Feb 2024 – May 2024',
-      location: 'Bengaluru',
+      location: 'Remote',
       description: [
-        'Contributed to Django PostgreSQL-based modules for customer data workflows in BFSI domain, with secure auth and form validation.',
-        'Developed pytest-based unit test suite covering 85% of codebase; accelerated QA and deployment cycle.',
+        'Built Django-PostgreSQL modules with secure authentication for BFSI workflows.',
+        'Automated business rules, accelerating client processes.',
+        'Created test suites with 85%+ coverage, reducing QA cycles.',
       ],
     },
     {
@@ -159,30 +271,42 @@ const Work = () => {
       period: 'Apr 2022 – May 2022',
       location: 'Remote',
       description: [
-        'Analyzed stock prices and news headlines, delivering actionable insights that improved forecasting accuracy by 25%.',
-        'Developed dashboards in Python and Power BI for presenting insights clearly and concisely.',
+        'Developed responsive web apps with React.js, enhancing access for 300+ users.',
+        'Built Python/Power BI dashboards, improving forecasting accuracy by 25%.',
+        'Contributed to agile sprints with mobile-responsive designs.',
       ],
     },
     {
       title: 'Machine Learning and Automation Intern',
-      company: 'AiRobosoft',
+      company: 'AiROBOSOFT Products And Services',
       period: 'Jun 2020 – Aug 2020',
       location: 'Remote',
       description: [
-        'Created an automated voice assistant for efficient task management, reducing manual effort by 25%.',
-        'Streamlined repetitive tasks using Python scripts, improving productivity.',
+        'Developed Python scripts for AI-driven UI/UX enhancements.',
+        'Collaborated on React.js/Node.js features, boosting engagement by 25%.',
+        'Assisted in AWS/Docker pipelines, cutting rollout time by 20%.',
+      ],
+    },
+    
+    {
+      title: 'Student Developer & Website Administrator',
+      company: 'RNS Institute of Technology',
+      period: 'June 2020– August 2021',
+      location: 'Bengaluru',
+      description: [
+        'Managed website with HTML, CSS, JavaScript for 500+ users.',
+        'Implemented real-time updates, improving engagement by 40%.',
+        'Integrated event calendars with faculty collaboration.',
       ],
     },
   ];
 
   return (
-    <div className="py-24 bg-white h-screen flex flex-col">
+    <div className="py-24 bg-white min-h-screen flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-shrink-0">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Work Experience</h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Professional journey and achievements
-          </p>
+          <p className="mt-4 text-xl text-gray-600">My professional journey and achievements</p>
         </div>
       </div>
 
@@ -193,7 +317,7 @@ const Work = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100"
                 >
                   <div className="flex justify-between items-start">
                     <div>
@@ -216,8 +340,8 @@ const Work = () => {
                   <ul className="mt-4 space-y-2">
                     {exp.description.map((item, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="inline-block w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-2"></span>
-                        <span className="text-gray-600">{item}</span>
+                        <span className="inline-block w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        <span className="text-gray-600 text-sm leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
